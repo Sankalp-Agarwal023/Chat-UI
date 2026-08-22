@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Chat UI</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+
+  <div class="app">
+
+    <aside class="sidebar">
+      <div class="sidebar-header">
+        <div class="logo">
+          <i class="fa-solid fa-robot"></i>
+          <span>ChatBot</span>
+        </div>
+        <button class="new-chat-btn" id="newChatBtn">
+          <i class="fa-solid fa-plus"></i> New Chat
+        </button>
+      </div>
+
+      <div class="chat-history">
+        <p class="history-label">Recent Chats</p>
+        <ul class="history-list" id="historyList">
+          <li class="history-item active">
+            <i class="fa-regular fa-message"></i>
+            <span>Tell me about React</span>
+          </li>
+          <li class="history-item">
+            <i class="fa-regular fa-message"></i>
+            <span>What is CSS Flexbox?</span>
+          </li>
+          <li class="history-item">
+            <i class="fa-regular fa-message"></i>
+            <span>JavaScript basics</span>
+          </li>
+        </ul>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="user-info">
+          <div class="avatar">S</div>
+          <span>Student</span>
+        </div>
+      </div>
+    </aside>
+
+    <main class="main">
+
+      <!-- Header -->
+      <header class="chat-header">
+        <button class="menu-toggle" id="menuToggle">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <h2 class="chat-title" id="chatTitle">Tell me about React</h2>
+        <div class="header-actions">
+          <button class="icon-btn" title="Search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </button>
+          <button class="icon-btn" title="More options">
+            <i class="fa-solid fa-ellipsis-vertical"></i>
+          </button>
+        </div>
+      </header>
+
+      <section class="chat-window" id="chatWindow">
+
+        <div class="date-divider"><span>Today</span></div>
+
+        <div class="message bot">
+          <div class="msg-avatar bot-avatar">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <div class="msg-content">
+            <div class="bubble">Hello! 👋 I'm your AI assistant. How can I help you today?</div>
+            <span class="timestamp">10:00 AM</span>
+          </div>
+        </div>
+
+        <div class="message user">
+          <div class="msg-content">
+            <div class="bubble">Tell me about React</div>
+            <span class="timestamp">10:01 AM</span>
+          </div>
+          <div class="msg-avatar user-avatar">S</div>
+        </div>
+
+        <div class="message bot">
+          <div class="msg-avatar bot-avatar">
+            <i class="fa-solid fa-robot"></i>
+          </div>
+          <div class="msg-content">
+            <div class="bubble">
+              React is a popular JavaScript library for building user interfaces — especially single-page applications. It was created by Facebook. 🚀
+              <br><br>
+              Key features: Component-based, Virtual DOM, and Declarative syntax!
+            </div>
+            <span class="timestamp">10:01 AM</span>
+          </div>
+        </div>
+
+      </section>
+
+      <div class="input-bar">
+        <button class="attach-btn icon-btn" title="Attach file">
+          <i class="fa-solid fa-paperclip"></i>
+        </button>
+        <div class="input-wrapper">
+          <textarea
+            id="messageInput"
+            class="message-input"
+            placeholder="Type a message..."
+            rows="1"
+          ></textarea>
+        </div>
+        <button class="send-btn" id="sendBtn" title="Send">
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
